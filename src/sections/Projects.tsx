@@ -26,7 +26,7 @@ const Projects = () => {
         "OpenMPを学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながら学習を進めることができます。",
         "各種指示文の機能だけでなく，指示文ごとのパフォーマンスの比較などにより，各種機能の使い所をなるべく明快に理解できるよう意図して作成しました。Github上で公開しています。",
       ],
-      images: ["/fibonacci_tasks_animation.gif"],
+      images: ["fibonacci_tasks_animation.gif"],
       links: [
         {
           title: "Github",
@@ -41,7 +41,7 @@ const Projects = () => {
         "EEIC３年後期実験「マイクロプロセッサの設計と実装」において，スーパースカラインオーダパイプラインプロセッサを設計しました。開発環境としてはvivadoを使用し，FPGAへ書き込んだのち動作確認をしました。",
         "スーパースカラは命令の同時実行判定やレジスタファイルの改良など考える点が多く大変でしたが，最終的にはきちんと動くものが完成し達成感がありました。設計はGithub上で公開しています。",
       ],
-      images: ["/pipeline_processor.jpeg"],
+      images: ["pipeline_processor.jpeg"],
       links: [
         {
           title: "Github",
@@ -64,7 +64,7 @@ const Projects = () => {
         "EEIC３年後期実験「情報可視化とデータ解析」において，チーム開発により，M1グランプリに出場している漫才師のコンビ名を可視化するウェブサイトを作成しました。大量のデータを可視化する手法を学ぶとともに，ウェブサイトを作成することでフロントエンドの基礎を学びました。",
         "技術面では，seleniumによるスクレイピング，D3.jsを用いた情報可視化，Reactを用いたウェブサイトの作成などを行いました。",
       ],
-      images: ["/m1_web.png"],
+      images: ["m1_web.png"],
       technologies: ["TypeScript", "React", "Vite", "D3.js", "Python"],
     },
     {

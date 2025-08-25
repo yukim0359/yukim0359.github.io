@@ -36,7 +36,7 @@ const About = () => {
                 className="text-center"
               >
                 <img
-                  src="/baseball.JPG"
+                  src="baseball.JPG"
                   alt="野球観戦"
                   className="w-full h-48 object-cover rounded-lg shadow-md"
                 />
@@ -54,7 +54,7 @@ const About = () => {
                 className="text-center"
               >
                 <img
-                  src="/satamisaki.JPG"
+                  src="satamisaki.JPG"
                   alt="佐田岬"
                   className="w-full h-48 object-cover rounded-lg shadow-md"
                 />
