@@ -55,7 +55,7 @@ const About = () => {
               >
                 <img
                   src="satamisaki.JPG"
-                  alt="佐田岬"
+                  alt="佐多岬"
                   className="w-full h-48 object-cover rounded-lg shadow-md"
                 />
                 <p className="text-sm text-gray-500 mt-2">
