@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-4xl md:text-4xl font-bold text-gray-900 mb-5"
+            className="text-4xl md:text-4xl font-bold text-gray-900 mb-8"
           >
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               前田 優希 （Yuki Maeda）
