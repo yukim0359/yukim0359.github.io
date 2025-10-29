@@ -6,29 +6,22 @@ const Skills = () => {
     {
       field: "Mainly used languages",
       technologies: ["C", "C++", "Python", "Rust"],
-      descriptions: [
-        "最初に学習したプログラミング言語はCでした。",
-        "C/C++は研究などでも使っています。",
-        "大学の授業で，mincコンパイラをRustで制作したことがあります。",
-      ],
+      descriptions: [],
     },
     {
       field: "HPC",
-      technologies: ["CUDA", "OpenMP", "MPI", "OpenACC"],
-      descriptions: [
-        "CUDAは研究で使っています。まだまだ勉強中です。",
-        "OpenMP/MPIは研究室活動や大学の授業で使っています。LU分解の後に連立方程式の解を求めるプログラムをOpenMP/MPIでハイブリッド並列化したりしました。",
-      ],
+      technologies: ["CUDA", "OpenMP", "MPI", "OpenACC", "Chapel"],
+      descriptions: [],
     },
     {
       field: "Computer Architecture",
       technologies: ["Verilog", "Vivado"],
-      descriptions: ["RISC-Vのプロセッサを設計する際に用いました。"],
+      descriptions: [],
     },
     {
       field: "Machine Learning",
-      technologies: ["PyTorch", "Scikit-learn"],
-      descriptions: ["簡単な機械学習モデルは組める程度です。"],
+      technologies: ["PyTorch", "Scikit-learn", "HuggingFace Transformers"],
+      descriptions: [],
     },
     {
       field: "Web",
@@ -40,36 +33,36 @@ const Skills = () => {
         "React",
         "Vite",
       ],
-      descriptions: ["使用頻度は高くありません。勉強中です。"],
+      descriptions: [],
     },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills</h2>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <ul className="max-w-4xl mx-auto list-disc list-inside space-y-5">
           {skills.map((skill, index) => (
-            <motion.div
+            <motion.li
               key={skill.field}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-lg p-6"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="py-2 pl-6 pr-4 border border-gray-200 rounded-md"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <div className="pt-2 font-semibold text-xl text-gray-900 mb-4">
                 {skill.field}
-              </h3>
+              </div>
 
-              <div className="mb-4">
+              <div className="mb-3">
                 <div className="flex flex-wrap gap-2">
                   {skill.technologies.map((tech) => (
                     <span
@@ -81,7 +74,6 @@ const Skills = () => {
                   ))}
                 </div>
               </div>
-
               <div>
                 <ul className="list-disc pl-5 space-y-1 text-gray-600">
                   {skill.descriptions.map((desc, descIndex) => (
@@ -89,9 +81,9 @@ const Skills = () => {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

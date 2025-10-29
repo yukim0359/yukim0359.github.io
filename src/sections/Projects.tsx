@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       descriptions: [
-        "このホームページです。フロントエンドの技術の勉強と，自分のこれまで取り組んできたことを公開するために作成しました。",
+        "このホームページです。フロントエンドの技術の練習のため，そして自分のこれまで取り組んできたことを公開するために作成しました。",
       ],
       technologies: [
         "TypeScript",
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "OpenMP Tutorial",
       descriptions: [
-        "OpenMPを学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながら学習を進めることができます。",
+        "OpenMPを学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながらOpenMPの基本的な構文に関する学習を進めることができます。",
         "各種指示文の機能だけでなく，指示文ごとのパフォーマンスの比較などにより，各種機能の使い所をなるべく明快に理解できるよう意図して作成しました。Github上で公開しています。",
       ],
       images: ["fibonacci_tasks_animation.gif"],
@@ -39,7 +39,7 @@ const Projects = () => {
       title: "Super Scalar In-Order Pipeline Processor Design",
       descriptions: [
         "EEIC３年後期実験「マイクロプロセッサの設計と実装」において，スーパースカラインオーダパイプラインプロセッサを設計しました。開発環境としてはvivadoを使用し，FPGAへ書き込んだのち動作確認をしました。",
-        "スーパースカラは命令の同時実行判定やレジスタファイルの改良など考える点が多く大変でしたが，最終的にはきちんと動くものが完成し達成感がありました。設計はGithub上で公開しています。",
+        "スーパースカラは命令の同時実行可能性判定やレジスタファイルの改良など考える点が多く大変でしたが，最終的にはきちんと動くものが完成し達成感がありました。設計はGithub上で公開しています。",
       ],
       images: ["pipeline_processor.jpeg"],
       links: [
@@ -61,7 +61,7 @@ const Projects = () => {
     {
       title: "M1 Combi-Name Visualization",
       descriptions: [
-        "EEIC３年後期実験「情報可視化とデータ解析」において，チーム開発により，M1グランプリに出場している漫才師のコンビ名を可視化するウェブサイトを作成しました。大量のデータを可視化する手法を学ぶとともに，ウェブサイトを作成することでフロントエンドの基礎を学びました。",
+        "EEIC３年後期実験「情報可視化とデータ解析」において，チーム開発により，M1グランプリに出場している漫才師のコンビ名を可視化するウェブサイトを作成しました。大規模なデータを可視化する手法を学ぶとともに，ウェブサイトを設計することでフロントエンドの基礎を学びました。",
         "技術面では，seleniumによるスクレイピング，D3.jsを用いた情報可視化，Reactを用いたウェブサイトの作成などを行いました。",
       ],
       images: ["m1_web.png"],
@@ -70,7 +70,7 @@ const Projects = () => {
     {
       title: "Atcoder Participations",
       descriptions: [
-        "アルゴリズムの勉強のため，Atcoderのコンテストに参加していました。水色に到達してからは少し離れてしまっています。",
+        "アルゴリズムの勉強のため，Atcoderのコンテストに参加していました。",
       ],
       links: [
         {
@@ -91,28 +91,38 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            これまでに取り組んできたことをまとめたものです。クリックして詳細を確認できます。
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-center mb-10"
+        >
+          <div className="text-left">
+            <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
+              これまでに取り組んできたことをまとめたものです。クリックして詳細を確認できます。
+            </p>
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 cursor-pointer hover:shadow-xl transition-shadow duration-200"
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="bg-white rounded-md shadow-sm p-5 border border-gray-200 cursor-pointer hover:shadow-md transition-shadow duration-200"
               onClick={() => openModal(index)}
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
