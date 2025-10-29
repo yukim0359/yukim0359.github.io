@@ -8,7 +8,10 @@ export interface Project {
   title: string;
   descriptions: string[];
   technologies?: string[];
-  images?: string[];
+  images?: {
+    src: string;
+    caption?: string;
+  }[];
   links?: {
     title: string;
     url: string;
