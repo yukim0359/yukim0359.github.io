@@ -1,42 +1,7 @@
 import { motion } from "framer-motion";
-import type { Skill } from "../types";
+import { skills } from "../constants/skills";
 
 const Skills = () => {
-  const skills: Skill[] = [
-    {
-      field: "Mainly used languages",
-      technologies: ["C", "C++", "Python", "Rust"],
-      descriptions: [],
-    },
-    {
-      field: "HPC",
-      technologies: ["CUDA", "OpenMP", "MPI", "OpenACC", "Chapel"],
-      descriptions: [],
-    },
-    {
-      field: "Computer Architecture",
-      technologies: ["Verilog", "Vivado"],
-      descriptions: [],
-    },
-    {
-      field: "Machine Learning",
-      technologies: ["PyTorch", "Scikit-learn", "HuggingFace Transformers"],
-      descriptions: [],
-    },
-    {
-      field: "Web",
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Vite",
-      ],
-      descriptions: [],
-    },
-  ];
-
   return (
     <section id="skills" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

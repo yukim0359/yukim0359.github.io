@@ -1,19 +1,7 @@
 import { motion } from "framer-motion";
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import type { SocialLink } from "../types";
+import { socialLinks } from "../constants/socialLinks";
 
 const Footer = () => {
-  const socialLinks: SocialLink[] = [
-    { icon: Github, href: "https://github.com/yukim0359", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/yuki-maeda-6a50b0373/", label: "Linkedin" },
-    { icon: Twitter, href: "https://x.com/my_u_03", label: "Twitter" },
-    {
-      icon: Instagram,
-      href: "https://www.instagram.com/yukim0359/",
-      label: "Instagram",
-    },
-  ];
-
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
