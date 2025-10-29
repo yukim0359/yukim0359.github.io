@@ -99,7 +99,9 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Projects
+          </h2>
         </motion.div>
 
         <motion.div
@@ -109,7 +111,7 @@ const Projects = () => {
           className="text-center mb-10"
         >
           <div className="text-left">
-            <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-3xl mx-auto">
               これまでに取り組んできたことをまとめたものです。クリックして詳細を確認できます。
             </p>
           </div>
@@ -125,11 +127,11 @@ const Projects = () => {
               className="bg-white rounded-md shadow-sm p-5 border border-gray-200 cursor-pointer hover:shadow-md transition-shadow duration-200"
               onClick={() => openModal(index)}
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
                 {project.title}
               </h3>
 
-              <p className="text-gray-600 mb-4 line-clamp-3 whitespace-pre-line">
+              <p className="text-gray-600 text-sm md:text-base mb-4 line-clamp-3 whitespace-pre-line">
                 {project.descriptions.join("\n")}
               </p>
 

@@ -46,7 +46,9 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Skills
+          </h2>
         </motion.div>
 
         <ul className="max-w-4xl mx-auto list-disc list-inside space-y-5">
@@ -58,7 +60,7 @@ const Skills = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="py-2 pl-6 pr-4 border border-gray-200 rounded-md"
             >
-              <div className="pt-2 font-semibold text-xl text-gray-900 mb-4">
+              <div className="pt-2 font-semibold text-lg md:text-xl text-gray-900 mb-4">
                 {skill.field}
               </div>
 
