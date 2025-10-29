@@ -21,7 +21,11 @@ const About = () => {
         >
           <div className="text-left space-y-6">
             <p className="text-gray-600 leading-relaxed text-lg">
-              東京大学工学部電子情報工学科（EEIC）に所属。並列・分散処理をはじめとしたHPC分野に関心があり，現在はGPUにおけるタスク並列モデルに関する研究を行っています。
+              東京大学工学部電子情報工学科（EEIC）
+              <a href="https://www.eidos.ic.i.u-tokyo.ac.jp" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                田浦研究室
+              </a>
+              に所属。並列・分散処理をはじめとしたHPC分野に関心があり，現在はGPUにおけるタスク並列モデルに関する研究を行っています。
               OSやコンピュータアーキテクチャなど，低レイヤーの技術にも興味があります。
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">

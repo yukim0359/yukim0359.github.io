@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { Github, Instagram, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import type { SocialLink } from "../types";
 
 const Hero = () => {
   const socialLinks: SocialLink[] = [
     { icon: Github, href: "https://github.com/yukim0359", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/yuki-maeda-6a50b0373/", label: "Linkedin" },
     { icon: Twitter, href: "https://x.com/my_u_03", label: "Twitter" },
     {
       icon: Instagram,
@@ -52,7 +53,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <social.icon size={28} />
                 <span className="sr-only">{social.label}</span>

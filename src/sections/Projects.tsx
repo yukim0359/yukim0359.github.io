@@ -101,7 +101,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            これまでに取り組んできたことをまとめたものです。
+            これまでに取り組んできたことをまとめたものです。クリックして詳細を確認できます。
           </p>
         </motion.div>
 
