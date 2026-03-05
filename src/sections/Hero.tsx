@@ -3,11 +3,8 @@ import { socialLinks } from "../constants/socialLinks";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="pt-28 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="home" className="pt-28 pb-8 bg-white">
+      <div className="page-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,16 +16,15 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
           >
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              前田 優希 （Yuki Maeda）
-            </span>
+            Yuki Maeda
+            <span className="text-base md:text-2xl">（前田 優希）</span>
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex justify-center space-x-5"
+            className="flex space-x-5"
           >
             {socialLinks.map((social, index) => (
               <motion.a

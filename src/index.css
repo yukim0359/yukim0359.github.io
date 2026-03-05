@@ -9,8 +9,71 @@
 
   body {
     margin: 0;
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family:
+      -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+      "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Helvetica Neue", Arial,
+      sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    font-size: 1.375rem; /* 22px 相当, 少しだけ小さく */
+    font-weight: 600; /* ≒ font-semibold */
+    color: #111827; /* gray-900 */
+    margin-bottom: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-heading {
+      font-size: 1.75rem; /* 28px 相当, 元より一段階小さめ */
+    }
+  }
+
+  .section-subheading {
+    font-size: 0.9375rem; /* 15px 相当 */
+    font-weight: 700;
+    color: #374151; /* gray-700 */
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-subheading {
+      font-size: 1.15rem; /* PC では本文と同等〜わずかに大きい程度 */
+    }
+  }
+
+  .section-body {
+    color: #4b5563; /* gray-600 */
+    font-size: 0.9375rem; /* 15px 相当 */
+    line-height: 1.75; /* ≒ leading-relaxed */
+    margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-body {
+      font-size: 1rem; /* PC では 16px 程度 */
+    }
+  }
+
+  .list-primary {
+    list-style-type: disc;
+    padding-left: 1.25rem; /* ≒ pl-5 */
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .list-secondary {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
   }
 }

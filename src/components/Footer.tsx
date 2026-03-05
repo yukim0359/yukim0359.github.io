@@ -53,10 +53,26 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="#bio"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  Projects
+                  Biography
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#research"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  Research
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#works"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  Works
                 </a>
               </li>
               <li>
@@ -77,7 +93,7 @@ const Footer = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="border-t border-gray-800 pt-8 text-center"
         >
-          <p className="text-gray-400">© 2025 Yuki Maeda</p>
+          <p className="text-gray-400">© 2026 Yuki Maeda</p>
         </motion.div>
       </div>
     </footer>

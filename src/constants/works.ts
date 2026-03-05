@@ -1,23 +1,10 @@
-import type { Project } from "../types";
+import type { Work } from "../types";
 
-export const projects: Project[] = [
-  {
-    title: "Portfolio Website",
-    descriptions: [
-      "このホームページです。フロントエンドの技術の練習のため，そして自分のこれまで取り組んできたことを公開するために作成しました。",
-    ],
-    technologies: [
-      "TypeScript",
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Github Pages",
-    ],
-  },
+export const works: Work[] = [
   {
     title: "OpenMP Tutorial",
     descriptions: [
-      "OpenMPを学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながらOpenMPの基本的な構文に関する学習を進めることができます。",
+      "B4時の研究室内の勉強会のため，OpenMPを学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながらOpenMPの基本的な構文に関する学習を進めることができます。",
       "各種指示文の機能だけでなく，指示文ごとのパフォーマンスの比較などにより，各種機能の使い所をなるべく明快に理解できるよう意図して作成しました。Github上で公開しています。",
     ],
     images: [
@@ -55,16 +42,8 @@ export const projects: Project[] = [
     ],
     technologies: ["Verilog", "Vivado"],
   },
-  // {
-  //   title: "Artificial Intelligence Experiment",
-  //   descriptions: [
-  //     "EEIC３年後期実験「人工知能演習」において，機械学習の基礎を学ぶとともに，既存の論文を読み解き，その論文に示されている実装の拡張を目指しました。",
-  //     "具体的には，論文「Text Gestalt: Stroke-Aware Scene Text Image Super-Resolution」に示されている，strokeの情報を用いた文字の超解像手法の実装に関して，論文には示されていない日本語の文字に対しての実装手法の提案および性能評価を行いました。",
-  //   ],
-  //   technologies: ["Python", "PyTorch"],
-  // },
   {
-    title: "M1 Combi-Name Visualization",
+    title: "A Visualization of Manzai Combi Name",
     descriptions: [
       "EEIC３年後期実験「情報可視化とデータ解析」において，チーム開発により，M1グランプリに出場している漫才師のコンビ名を可視化するウェブサイトを作成しました。大規模なデータを可視化する手法を学ぶとともに，ウェブサイトを設計することでフロントエンドの基礎を学びました。",
       "技術面では，seleniumによるスクレイピング，D3.jsを用いた情報可視化，Reactを用いたウェブサイトの作成などを行いました。",
@@ -81,6 +60,12 @@ export const projects: Project[] = [
     title: "Atcoder Participations",
     descriptions: [
       "アルゴリズムの勉強のため，Atcoderのコンテストに参加していました。",
+    ],
+    images: [
+      {
+        src: "atcoder_profile.png",
+        caption: "Atcoderのプロフィールページのスクリーンショット",
+      },
     ],
     links: [
       {

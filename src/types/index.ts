@@ -4,7 +4,7 @@ export interface SocialLink {
   label: string;
 }
 
-export interface Project {
+export interface Work {
   title: string;
   descriptions: string[];
   technologies?: string[];

@@ -1,50 +1,48 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
-import { projects } from "../constants/projects";
+import { works } from "../constants/works";
 
-const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+const Works = () => {
+  const [selectedWork, setSelectedWork] = useState<number | null>(null);
 
   const openModal = (index: number) => {
-    setSelectedProject(index);
+    setSelectedWork(index);
   };
 
   const closeModal = () => {
-    setSelectedProject(null);
+    setSelectedWork(null);
   };
 
   return (
-    <section id="projects" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="works" className="py-6 bg-white">
+      <div className="page-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Projects
-          </h2>
+          <h2 className="section-heading">Works</h2>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-center mb-10"
+          className="mb-10"
         >
-          <div className="text-left">
-            <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-3xl mx-auto">
-              これまでに取り組んできたことをまとめたものです。クリックして詳細を確認できます。
+          <div className="text-left space-y-5">
+            <p className="section-body">
+              研究に限らず，これまでに取り組んできたことの抜粋です。クリックして詳細を確認できます。
             </p>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {projects.map((project, index) => (
+        <div className="grid md:grid-cols-2 gap-6">
+          {works.map((work, index) => (
             <motion.div
-              key={project.title}
+              key={work.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -52,15 +50,15 @@ const Projects = () => {
               onClick={() => openModal(index)}
             >
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
-                {project.title}
+                {work.title}
               </h3>
 
               <p className="text-gray-600 text-sm md:text-base mb-4 line-clamp-3 whitespace-pre-line">
-                {project.descriptions.join("\n")}
+                {work.descriptions.join("\n")}
               </p>
 
               <div className="flex flex-wrap gap-2">
-                {project.technologies?.map((tech) => (
+                {work.technologies?.map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
@@ -75,7 +73,7 @@ const Projects = () => {
       </div>
 
       <AnimatePresence>
-        {selectedProject !== null && (
+        {selectedWork !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -93,7 +91,7 @@ const Projects = () => {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <h2 className="text-2xl font-bold text-gray-900">
-                    {projects[selectedProject].title}
+                    {works[selectedWork].title}
                   </h2>
                   <button
                     onClick={closeModal}
@@ -105,70 +103,60 @@ const Projects = () => {
 
                 <div className="space-y-4">
                   <div className="space-y-3">
-                    {projects[selectedProject].descriptions.map(
-                      (desc, descIndex) => (
-                        <p
-                          key={descIndex}
-                          className="text-gray-600 leading-relaxed"
-                        >
-                          {desc}
-                        </p>
-                      ),
-                    )}
+                    {works[selectedWork].descriptions.map((desc, descIndex) => (
+                      <p
+                        key={descIndex}
+                        className="text-gray-600 leading-relaxed"
+                      >
+                        {desc}
+                      </p>
+                    ))}
                   </div>
 
-                  {projects[selectedProject].images && (
+                  {works[selectedWork].images && (
                     <div>
                       <div className="grid grid-cols-1 gap-4">
-                        {projects[selectedProject].images?.map(
-                          (img, imgIndex) => (
-                            <div key={imgIndex} className="text-center">
-                              <img
-                                src={img.src}
-                                alt={`${
-                                  projects[selectedProject].title
-                                } image ${imgIndex + 1}`}
-                                className="w-full max-w-md mx-auto rounded-lg shadow-md"
-                              />
-                              {img.caption && (
-                                <p className="text-sm text-gray-500 mt-2">
-                                  {img.caption}
-                                </p>
-                              )}
-                            </div>
-                          ),
-                        )}
+                        {works[selectedWork].images?.map((img, imgIndex) => (
+                          <div key={imgIndex} className="text-center">
+                            <img
+                              src={img.src}
+                              alt={`${works[selectedWork].title} image ${imgIndex + 1}`}
+                              className="w-full max-w-md mx-auto rounded-lg shadow-md"
+                            />
+                            {img.caption && (
+                              <p className="text-sm text-gray-500 mt-2">
+                                {img.caption}
+                              </p>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}
 
-                  {projects[selectedProject].links && (
+                  {works[selectedWork].links && (
                     <div>
                       <div className="flex flex-col gap-2">
-                        {projects[selectedProject].links?.map(
-                          (link, linkIndex) => (
-                            <div key={linkIndex} className="text-gray-600">
-                              <span className="font-medium">
-                                {link.title}:{" "}
-                              </span>
-                              <a
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 hover:text-blue-800 underline break-all"
-                              >
-                                {link.url}
-                              </a>
-                            </div>
-                          ),
-                        )}
+                        {works[selectedWork].links?.map((link, linkIndex) => (
+                          <div key={linkIndex} className="text-gray-600">
+                            <span className="font-medium">{link.title}: </span>
+                            <a
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 underline break-all"
+                            >
+                              {link.url}
+                            </a>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}
 
                   <div>
                     <div className="flex flex-wrap gap-2">
-                      {projects[selectedProject].technologies?.map((tech) => (
+                      {works[selectedWork].technologies?.map((tech) => (
                         <span
                           key={tech}
                           className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
@@ -188,4 +176,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Works;
