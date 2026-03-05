@@ -17,7 +17,7 @@ const Hero = () => {
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
           >
             Yuki Maeda
-            <span className="text-base md:text-2xl">（前田 優希）</span>
+            <span className="text-xl md:text-2xl">（前田 優希）</span>
           </motion.h1>
 
           <motion.div
