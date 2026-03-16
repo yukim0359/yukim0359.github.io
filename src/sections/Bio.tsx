@@ -88,7 +88,7 @@ const Bio = () => {
                           href="https://zenn.dev/fixstars/articles/6000-max-q-llm-finetuning"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 underline"
+                          className="link"
                         >
                           tech blog
                         </a>
@@ -100,7 +100,7 @@ const Bio = () => {
                           href="https://zenn.dev/fixstars/articles/6000-max-q-llm-finetuning"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 underline"
+                          className="link"
                         >
                           Blackwellアーキテクチャ上でのLLM
                           fine-tuningについてのtech blog

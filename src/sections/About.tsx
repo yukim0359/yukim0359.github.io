@@ -32,7 +32,7 @@ const About = () => {
                     href="https://www.eidos.ic.i.u-tokyo.ac.jp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+                    className="link"
                   >
                     Taura Laboratory
                   </a>
@@ -46,7 +46,7 @@ const About = () => {
                     href="https://www.eidos.ic.i.u-tokyo.ac.jp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+                    className="link"
                   >
                     田浦研究室
                   </a>

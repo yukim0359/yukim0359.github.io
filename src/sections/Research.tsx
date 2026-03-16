@@ -33,7 +33,7 @@ const Research = () => {
                   href="https://www.eidos.ic.i.u-tokyo.ac.jp/contents/research/gpu_task_parallelism"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline"
+                  className="link"
                 >
                   see also the research introduction on the lab website
                 </a>
@@ -50,7 +50,7 @@ const Research = () => {
                   href="https://www.eidos.ic.i.u-tokyo.ac.jp/contents/research/gpu_task_parallelism"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline"
+                  className="link"
                 >
                   研究室HPの研究紹介記事
                 </a>
@@ -115,7 +115,7 @@ const Research = () => {
                   href="https://jnamaral.github.io/LATHC26/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline"
+                  className="link"
                 >
                   LATHC 2026
                 </a>
