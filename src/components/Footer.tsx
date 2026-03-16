@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { socialLinks } from "../constants/socialLinks";
+import { useI18n } from "../i18n/index.tsx";
 
 const Footer = () => {
+  const { texts } = useI18n();
+  const quickLinks = [
+    { href: "#home", label: texts.header.nav.home },
+    { href: "#about", label: texts.header.nav.about },
+    { href: "#research", label: texts.header.nav.research },
+    { href: "#works", label: texts.header.nav.works },
+    { href: "#skills", label: texts.header.nav.skills },
+    { href: "#bio", label: texts.header.nav.bio },
+  ];
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,54 +45,16 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#bio"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Biography
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#research"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Research
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#works"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Works
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Skills
-                </a>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
