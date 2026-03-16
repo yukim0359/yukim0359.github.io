@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { skills } from "../constants/skills";
+import { useI18n } from "../i18n/index.tsx";
 
 const Skills = () => {
+  const { locale } = useI18n();
   return (
     <section id="skills" className="py-6 bg-white">
       <div className="page-container">
@@ -25,7 +27,11 @@ const Skills = () => {
               <div className="section-subheading">{skill.field}</div>
               <ul className="list-primary section-body">
                 {skill.descriptions.map((desc, descIndex) => (
-                  <li key={descIndex}>{desc}</li>
+                  <li key={descIndex}>
+                    {locale === "en" && skill.descriptionsEn
+                      ? skill.descriptionsEn[descIndex] ?? desc
+                      : desc}
+                  </li>
                 ))}
               </ul>
             </motion.div>

@@ -7,10 +7,12 @@ export interface SocialLink {
 export interface Work {
   title: string;
   descriptions: string[];
+  descriptionsEn?: string[];
   technologies?: string[];
   images?: {
     src: string;
     caption?: string;
+    captionEn?: string;
   }[];
   links?: {
     title: string;
@@ -22,4 +24,5 @@ export interface Skill {
   field: string;
   technologies: string[];
   descriptions: string[];
+  descriptionsEn?: string[];
 }

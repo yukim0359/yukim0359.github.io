@@ -1,3 +1,4 @@
+import { I18nProvider } from "./i18n/index.tsx";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./sections/About";
@@ -9,19 +10,21 @@ import Skills from "./sections/Skills";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Research />
-        <Works />
-        <Skills />
-        <Bio />
-        <div className="h-6" />
-      </main>
-      <Footer />
-    </div>
+    <I18nProvider>
+      <div className="App">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Research />
+          <Works />
+          <Skills />
+          <Bio />
+          <div className="h-6" />
+        </main>
+        <Footer />
+      </div>
+    </I18nProvider>
   );
 }
 

@@ -2,8 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
 import { works } from "../constants/works";
+import { useI18n } from "../i18n/index.tsx";
 
 const Works = () => {
+  const { locale } = useI18n();
   const [selectedWork, setSelectedWork] = useState<number | null>(null);
 
   const openModal = (index: number) => {
@@ -34,7 +36,9 @@ const Works = () => {
         >
           <div className="text-left space-y-5">
             <p className="section-body">
-              研究に限らず，これまでに取り組んできたことの抜粋です。クリックして詳細を確認できます。
+              {locale === "en"
+                ? "A selection of things I have worked on, not limited to research. Click an item to see more details."
+                : "研究に限らず，これまでに取り組んできたことの抜粋です。クリックして詳細を確認できます。"}
             </p>
           </div>
         </motion.div>
@@ -54,7 +58,10 @@ const Works = () => {
               </h3>
 
               <p className="text-gray-600 text-sm md:text-base mb-4 line-clamp-3 whitespace-pre-line">
-                {work.descriptions.join("\n")}
+                {(locale === "en" && work.descriptionsEn
+                  ? work.descriptionsEn
+                  : work.descriptions
+                ).join("\n")}
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -108,7 +115,11 @@ const Works = () => {
                         key={descIndex}
                         className="text-gray-600 leading-relaxed"
                       >
-                        {desc}
+                        {(locale === "en" &&
+                        works[selectedWork].descriptionsEn
+                          ? works[selectedWork].descriptionsEn
+                          : works[selectedWork].descriptions)[descIndex] ??
+                          desc}
                       </p>
                     ))}
                   </div>
@@ -125,7 +136,9 @@ const Works = () => {
                             />
                             {img.caption && (
                               <p className="text-sm text-gray-500 mt-2">
-                                {img.caption}
+                                {locale === "en" && img.captionEn
+                                  ? img.captionEn
+                                  : img.caption}
                               </p>
                             )}
                           </div>

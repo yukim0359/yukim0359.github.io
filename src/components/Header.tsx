@@ -1,21 +1,23 @@
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Globe2, Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { useI18n } from "../i18n/index.tsx";
 
 const Header = () => {
+  const { texts, locale, setLocale } = useI18n();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const navItems = useMemo(
     () => [
-      { name: "Home", href: "#home", id: "home" },
-      { name: "About", href: "#about", id: "about" },
-      { name: "Research", href: "#research", id: "research" },
-      { name: "Works", href: "#works", id: "works" },
-      { name: "Skills", href: "#skills", id: "skills" },
-      { name: "Biography", href: "#bio", id: "bio" },
+      { name: texts.header.nav.home, href: "#home", id: "home" },
+      { name: texts.header.nav.about, href: "#about", id: "about" },
+      { name: texts.header.nav.research, href: "#research", id: "research" },
+      { name: texts.header.nav.works, href: "#works", id: "works" },
+      { name: texts.header.nav.skills, href: "#skills", id: "skills" },
+      { name: texts.header.nav.bio, href: "#bio", id: "bio" },
     ],
-    [],
+    [texts.header.nav],
   );
 
   useEffect(() => {
@@ -63,26 +65,37 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold text-gray-900">
-            <a href="#home">Yuki Maeda</a>
+            <a href="#home">{texts.header.title}</a>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                className={`transition-colors duration-200 ${
-                  activeSection === item.id
-                    ? "text-gray-900 font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item.name}
-              </motion.a>
-            ))}
-          </nav>
+          <div className="flex items-center gap-4">
+            <nav className="hidden md:flex space-x-8">
+              {navItems.map((item) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className={`transition-colors duration-200 ${
+                    activeSection === item.id
+                      ? "text-gray-900 font-semibold"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+            </nav>
+
+            <button
+              type="button"
+              className="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-full px-3 py-1 bg-white/70 backdrop-blur"
+              onClick={() => setLocale(locale === "ja" ? "en" : "ja")}
+            >
+              <Globe2 size={16} />
+              <span>{texts.header.languageToggleLabel}</span>
+            </button>
+          </div>
 
           <button
             className="md:hidden p-2"
