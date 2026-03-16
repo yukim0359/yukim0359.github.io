@@ -95,14 +95,14 @@ const Header = () => {
               <Globe2 size={16} />
               <span>{texts.header.languageToggleLabel}</span>
             </button>
-          </div>
 
-          <button
-            className="md:hidden p-2 text-slate-700 hover:text-slate-900"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <button
+              className="md:hidden p-2 text-slate-700 hover:text-slate-900"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (

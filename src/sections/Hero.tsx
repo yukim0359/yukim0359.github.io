@@ -3,7 +3,7 @@ import { socialLinks } from "../constants/socialLinks";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-28 pb-8 bg-white">
+    <section id="home" className="pt-28 pb-4 md:pb-8 bg-white">
       <div className="page-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
-                <social.icon size={28} />
+                <social.icon className="w-6 h-6 md:w-7 md:h-7" />
                 <span className="sr-only">{social.label}</span>
               </motion.a>
             ))}
