@@ -61,10 +61,10 @@ const Header = () => {
   }, [navItems]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="text-2xl font-bold text-gray-900">
+          <div className="text-2xl font-bold text-slate-900">
             <a href="#home">{texts.header.title}</a>
           </div>
 
@@ -76,8 +76,8 @@ const Header = () => {
                   href={item.href}
                   className={`transition-colors duration-200 ${
                     activeSection === item.id
-                      ? "text-gray-900 font-semibold"
-                      : "text-gray-600 hover:text-gray-900"
+                      ? "text-slate-900 font-semibold"
+                      : "text-slate-600 hover:text-slate-900"
                   }`}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -89,7 +89,7 @@ const Header = () => {
 
             <button
               type="button"
-              className="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-full px-3 py-1 bg-white/70 backdrop-blur"
+              className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 border border-slate-200 rounded-full px-3 py-1 bg-white/70 backdrop-blur"
               onClick={() => setLocale(locale === "ja" ? "en" : "ja")}
             >
               <Globe2 size={16} />
@@ -98,7 +98,7 @@ const Header = () => {
           </div>
 
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-slate-700 hover:text-slate-900"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -110,7 +110,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-gray-200"
+            className="md:hidden border-t border-slate-200"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
@@ -119,8 +119,8 @@ const Header = () => {
                   href={item.href}
                   className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
                     activeSection === item.id
-                      ? "text-gray-900 font-semibold bg-gray-50"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      ? "text-slate-900 font-semibold bg-slate-100"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
