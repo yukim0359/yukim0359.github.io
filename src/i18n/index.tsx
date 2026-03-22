@@ -14,7 +14,9 @@ export interface SiteTexts {
       skills: string;
       bio: string;
     };
-    languageToggleLabel: string;
+    language: {
+      groupLabel: string;
+    };
   };
 }
 
@@ -29,7 +31,9 @@ export const jaTexts: SiteTexts = {
       skills: "Skills",
       bio: "Biography",
     },
-    languageToggleLabel: "English",
+    language: {
+      groupLabel: "表示言語",
+    },
   },
 };
 
@@ -44,7 +48,9 @@ export const enTexts: SiteTexts = {
       skills: "Skills",
       bio: "Biography",
     },
-    languageToggleLabel: "日本語",
+    language: {
+      groupLabel: "Language",
+    },
   },
 };
 

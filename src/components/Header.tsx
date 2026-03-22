@@ -87,14 +87,44 @@ const Header = () => {
               ))}
             </nav>
 
-            <button
-              type="button"
-              className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 border border-slate-200 rounded-full px-3 py-1 bg-white/70 backdrop-blur"
-              onClick={() => setLocale(locale === "ja" ? "en" : "ja")}
+            <div
+              role="group"
+              aria-label={texts.header.language.groupLabel}
+              className="ml-2 inline-flex items-stretch overflow-hidden rounded-lg border border-slate-200 bg-white/90 text-xs font-semibold shadow-sm backdrop-blur md:ml-3"
             >
-              <Globe2 size={16} />
-              <span>{texts.header.languageToggleLabel}</span>
-            </button>
+              <span
+                className="flex items-center justify-center border-r border-slate-200 bg-slate-50/60 px-2.5 text-slate-600"
+                aria-hidden
+              >
+                <Globe2 size={16} strokeWidth={1.75} />
+              </span>
+              <div className="flex items-stretch p-0.5">
+                <button
+                  type="button"
+                  onClick={() => setLocale("ja")}
+                  aria-pressed={locale === "ja"}
+                  className={`min-w-[2.5rem] rounded-md px-2.5 py-1 tracking-wide transition-colors ${
+                    locale === "ja"
+                      ? "bg-slate-900 text-white"
+                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                  }`}
+                >
+                  JP
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLocale("en")}
+                  aria-pressed={locale === "en"}
+                  className={`min-w-[2.5rem] rounded-md px-2.5 py-1 tracking-wide transition-colors ${
+                    locale === "en"
+                      ? "bg-slate-900 text-white"
+                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
+            </div>
 
             <button
               className="md:hidden p-2 text-slate-700 hover:text-slate-900"
