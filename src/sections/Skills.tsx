@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
 import { skills } from "../constants/skills";
 import { useI18n } from "../i18n/index.tsx";
 
@@ -13,7 +15,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="section-heading">Skills</h2>
+          <SectionHeading icon={Sparkles}>Skills</SectionHeading>
         </motion.div>
 
         <div className="space-y-6">

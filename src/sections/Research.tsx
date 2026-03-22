@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Microscope } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
 import { useI18n } from "../i18n/index.tsx";
 
 const Research = () => {
@@ -12,7 +14,7 @@ const Research = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="section-heading">Research</h2>
+          <SectionHeading icon={Microscope}>Research</SectionHeading>
         </motion.div>
 
         <motion.div

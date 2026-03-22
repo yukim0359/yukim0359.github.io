@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { GraduationCap } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
 import { useI18n } from "../i18n/index.tsx";
 
 const Bio = () => {
@@ -12,7 +14,7 @@ const Bio = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="section-heading">Biography</h2>
+          <SectionHeading icon={GraduationCap}>Biography</SectionHeading>
         </motion.div>
 
         <motion.div

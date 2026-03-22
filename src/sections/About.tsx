@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { UserRound } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
 import { useI18n } from "../i18n/index.tsx";
 
 const About = () => {
@@ -12,7 +14,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h2 className="section-heading">About Me</h2>
+          <SectionHeading icon={UserRound}>About Me</SectionHeading>
         </motion.div>
 
         <motion.div

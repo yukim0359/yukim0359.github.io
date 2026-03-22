@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { X } from "lucide-react";
+import { Layers2, X } from "lucide-react";
 import { useState } from "react";
+import SectionHeading from "../components/SectionHeading";
 import { works } from "../constants/works";
 import { useI18n } from "../i18n/index.tsx";
 
@@ -25,7 +26,7 @@ const Works = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h2 className="section-heading">Works</h2>
+          <SectionHeading icon={Layers2}>Works</SectionHeading>
         </motion.div>
 
         <motion.div
