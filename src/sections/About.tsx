@@ -59,7 +59,7 @@ const About = () => {
             <p className="section-body">
               {locale === "en"
                 ? "My main hobby is watching baseball. I am a Yokohama DeNA BayStars fan and have supported the team since I was a six-year-old child. I also enjoy watching other sports, listening to music, and travelling."
-                : "趣味は野球観戦です。横浜DeNAベイスターズを応援しており，いわゆる暗黒時代からのファンです。他にもスポーツ観戦全般，音楽鑑賞，旅行なども好きです。"}
+                : "趣味は野球観戦です。横浜 DeNA ベイスターズを応援しており，いわゆる暗黒時代からのファンです。他にもスポーツ観戦全般，音楽鑑賞，旅行なども好きです。"}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

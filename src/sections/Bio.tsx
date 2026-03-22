@@ -104,8 +104,8 @@ const Bio = () => {
                           rel="noopener noreferrer"
                           className="link"
                         >
-                          Blackwellアーキテクチャ上でのLLM
-                          fine-tuningについてのtech blog
+                          Blackwell アーキテクチャ上での LLM
+                          fine-tuning についての tech blog
                         </a>{" "}
                         を執筆しました。
                       </>

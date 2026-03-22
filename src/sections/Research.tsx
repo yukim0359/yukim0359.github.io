@@ -47,14 +47,14 @@ const Research = () => {
             ) : (
               <>
                 並列性を備えたハードウェアの特性を深く理解したうえで，その特性を最大限に，かつ簡単に引き出すことのできるソフトウェア設計に関心があります。
-                現在は，卒論研究として，GPUにおけるタスク並列ランタイムの設計・実装に取り組んでいます（
+                現在は，卒論研究として，GPU におけるタスク並列ランタイムの設計・実装に取り組んでいます（
                 <a
                   href="https://www.eidos.ic.i.u-tokyo.ac.jp/contents/research/gpu_task_parallelism"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link"
                 >
-                  研究室HPの研究紹介記事
+                  研究室 HP の研究紹介記事
                 </a>
                 もご覧ください）。
                 <br />
@@ -79,19 +79,19 @@ const Research = () => {
               <li>
                 {locale === "en"
                   ? "Examples: scheduling of grouped GEMM in LLM training and inference, parallel graph traversal on GPUs, etc."
-                  : "例：LLM学習・推論におけるGrouped GEMMのスケジューリング，GPU上での並列グラフ探索 など"}
+                  : "例：LLM 学習・推論における Grouped GEMM のスケジューリング，GPU 上での並列グラフ探索 など"}
               </li>
             </ul>
             <li>
               {locale === "en"
                 ? "Optimization of LLM training and inference workloads"
-                : "LLM推論・学習ワークロードの最適化"}
+                : "LLM 推論・学習ワークロードの最適化"}
             </li>
             <ul className="list-secondary section-body">
               <li>
                 {locale === "en"
                   ? "Examples: mitigating load imbalance in MoE expert parallelism, low-precision computation such as quantization, etc."
-                  : "例：MoEのExpert Parallelismにおける負荷不均衡の緩和，量子化等の低精度処理 など"}
+                  : "例：MoE の Expert Parallelism における負荷不均衡の緩和，量子化等の低精度処理 など"}
               </li>
             </ul>
             <li>
