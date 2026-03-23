@@ -11,7 +11,7 @@ const Bio = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.45 }}
           className="mb-8"
         >
           <SectionHeading icon={GraduationCap}>Biography</SectionHeading>
@@ -20,7 +20,7 @@ const Bio = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          transition={{ duration: 0.45, delay: 0.08 }}
           className="space-y-6"
         >
           <section>

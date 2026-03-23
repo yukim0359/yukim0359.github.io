@@ -12,7 +12,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.45 }}
           className="mb-8"
         >
           <SectionHeading icon={Sparkles}>Skills</SectionHeading>
@@ -24,7 +24,7 @@ const Skills = () => {
               key={skill.field}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.35, delay: index * 0.07 }}
             >
               <div className="section-subheading">{skill.field}</div>
               <ul className="list-primary section-body">

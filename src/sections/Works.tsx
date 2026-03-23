@@ -23,7 +23,7 @@ const Works = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.45 }}
           className="mb-8"
         >
           <SectionHeading icon={Layers2}>Works</SectionHeading>
@@ -32,7 +32,7 @@ const Works = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          transition={{ duration: 0.45, delay: 0.08 }}
           className="mb-10"
         >
           <div className="text-left space-y-5">
@@ -50,7 +50,7 @@ const Works = () => {
               key={work.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.45, delay: index * 0.1 }}
               className="bg-white rounded-md shadow-sm p-5 border border-gray-200 cursor-pointer hover:shadow-md transition-shadow duration-200"
               onClick={() => openModal(index)}
             >

@@ -19,7 +19,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.55 }}
           >
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
@@ -41,7 +41,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.55, delay: 0.12 }}
           >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -62,7 +62,7 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.55, delay: 0.36 }}
           className="border-t border-gray-800 pt-8 text-center"
         >
           <p className="text-gray-400">© 2026 Yuki Maeda</p>

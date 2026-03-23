@@ -8,12 +8,12 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.45 }}
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            transition={{ duration: 0.45, delay: 0.08 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
           >
             Yuki Maeda
@@ -23,7 +23,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.45, delay: 0.3 }}
             className="flex space-x-5"
           >
             {socialLinks.map((social, index) => (
@@ -37,7 +37,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
+                transition={{ duration: 0.35, delay: index * 0.05 }}
               >
                 <social.icon className="w-6 h-6 md:w-7 md:h-7" />
                 <span className="sr-only">{social.label}</span>

@@ -11,7 +11,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.55 }}
           className="mb-8"
         >
           <SectionHeading icon={UserRound}>About Me</SectionHeading>
@@ -20,7 +20,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.55, delay: 0.12 }}
           className="text-center"
         >
           <div className="text-left space-y-5">
@@ -66,7 +66,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.45, delay: 0.24 }}
                 className="text-center"
               >
                 <img
@@ -94,7 +94,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.45, delay: 0.36 }}
                 className="text-center"
               >
                 <img
