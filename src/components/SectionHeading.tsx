@@ -11,7 +11,7 @@ type Props = {
 const SectionHeading = ({ icon: Icon, children }: Props) => (
   <h2 className="section-heading flex flex-wrap items-center gap-3">
     <Icon
-      className="shrink-0 size-[1.25rem] text-slate-900 md:size-[1.35rem]"
+      className="shrink-0 size-[1.25rem] text-blue-700 md:size-[1.35rem]"
       strokeWidth={2.5}
       aria-hidden
     />
