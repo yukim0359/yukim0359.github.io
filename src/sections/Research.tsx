@@ -47,7 +47,8 @@ const Research = () => {
             ) : (
               <>
                 並列性を備えたハードウェアの特性を深く理解したうえで，その特性を最大限に，かつ簡単に引き出すことのできるソフトウェア設計に関心があります。
-                現在は，卒論研究として，GPU におけるタスク並列ランタイムの設計・実装に取り組んでいます（
+                卒論研究として，GPU
+                におけるタスク並列ランタイムの設計・実装に取り組みました（
                 <a
                   href="https://www.eidos.ic.i.u-tokyo.ac.jp/contents/research/gpu_task_parallelism"
                   target="_blank"

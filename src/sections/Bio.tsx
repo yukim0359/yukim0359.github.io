@@ -45,6 +45,23 @@ const Bio = () => {
                     ? "Department of Information and Communication Engineering, Faculty of Engineering, The University of Tokyo"
                     : "東京大学 工学部 電子情報工学科"}
                 </span>
+                <ul className="list-secondary section-body">
+                  <li>
+                    {locale === "en"
+                      ? "Outstanding Undergraduate Thesis Award"
+                      : "優秀卒業論文賞 受賞"}
+                  </li>
+                </ul>
+              </li>
+              <li>
+                {locale === "en"
+                  ? "Apr. 2026 – Present: "
+                  : "2026年4月 – 現在："}
+                <span className="font-bold">
+                  {locale === "en"
+                    ? "Department of Information and Communication Engineering, Graduate School of Information Science and Technology, The University of Tokyo"
+                    : "東京大学大学院 情報理工学系研究科 電子情報学専攻"}
+                </span>
               </li>
             </ul>
           </section>
@@ -104,8 +121,8 @@ const Bio = () => {
                           rel="noopener noreferrer"
                           className="link"
                         >
-                          Blackwell アーキテクチャ上での LLM
-                          fine-tuning についての tech blog
+                          Blackwell アーキテクチャ上での LLM fine-tuning
+                          についての tech blog
                         </a>{" "}
                         を執筆しました。
                       </>

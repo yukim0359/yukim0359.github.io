@@ -27,9 +27,10 @@ const About = () => {
             <p className="section-body">
               {locale === "en" ? (
                 <>
-                  I am a fourth-year undergraduate student in the Department of
-                  Information and Communication Engineering, Faculty of
-                  Engineering, the University of Tokyo, and a member of{" "}
+                  I am a first-year master's student in the Department of
+                  Information and Communication Engineering, Graduate School of
+                  Information Science and Technology, The University of Tokyo, and
+                  a member of{" "}
                   <a
                     href="https://www.eidos.ic.i.u-tokyo.ac.jp"
                     target="_blank"
@@ -43,7 +44,7 @@ const About = () => {
                 </>
               ) : (
                 <>
-                  東京大学工学部電子情報工学科（EEIC）
+                  東京大学大学院 情報理工学系研究科 電子情報学専攻{" "}
                   <a
                     href="https://www.eidos.ic.i.u-tokyo.ac.jp"
                     target="_blank"
@@ -52,7 +53,7 @@ const About = () => {
                   >
                     田浦研究室
                   </a>
-                  に所属。学部4年。並列・分散処理を主とした高性能計算（HPC）分野に関心があり，研究を行っています。
+                  に所属。修士1年。並列・分散処理を主とした高性能計算（HPC）分野に関心があり，研究を行っています。
                 </>
               )}
             </p>
