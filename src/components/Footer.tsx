@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import { socialLinks } from "../constants/socialLinks";
 import { useI18n } from "../i18n/index.tsx";
+import { headerEn } from "../data/en/header";
+import { headerJa } from "../data/ja/header";
 
 const Footer = () => {
-  const { texts } = useI18n();
+  const { locale } = useI18n();
+  const header = locale === "en" ? headerEn : headerJa;
   const quickLinks = [
-    { href: "#home", label: texts.header.nav.home },
-    { href: "#about", label: texts.header.nav.about },
-    { href: "#research", label: texts.header.nav.research },
-    { href: "#works", label: texts.header.nav.works },
-    { href: "#skills", label: texts.header.nav.skills },
-    { href: "#bio", label: texts.header.nav.bio },
+    { href: "#home", label: header.nav.home },
+    { href: "#about", label: header.nav.about },
+    { href: "#research", label: header.nav.research },
+    { href: "#works", label: header.nav.works },
+    { href: "#skills", label: header.nav.skills },
+    { href: "#bio", label: header.nav.bio },
   ];
   return (
     <footer className="bg-gray-900 text-white py-12">

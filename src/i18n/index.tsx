@@ -3,60 +3,8 @@ import type { ReactNode } from "react";
 
 export type Locale = "ja" | "en";
 
-export interface SiteTexts {
-  header: {
-    title: string;
-    nav: {
-      home: string;
-      about: string;
-      research: string;
-      works: string;
-      skills: string;
-      bio: string;
-    };
-    language: {
-      groupLabel: string;
-    };
-  };
-}
-
-export const jaTexts: SiteTexts = {
-  header: {
-    title: "Yuki Maeda",
-    nav: {
-      home: "Home",
-      about: "About",
-      research: "Research",
-      works: "Works",
-      skills: "Skills",
-      bio: "Biography",
-    },
-    language: {
-      groupLabel: "表示言語",
-    },
-  },
-};
-
-export const enTexts: SiteTexts = {
-  header: {
-    title: "Yuki Maeda",
-    nav: {
-      home: "Home",
-      about: "About",
-      research: "Research",
-      works: "Works",
-      skills: "Skills",
-      bio: "Biography",
-    },
-    language: {
-      groupLabel: "Language",
-    },
-  },
-};
-
 interface I18nContextValue {
   locale: Locale;
-  texts: SiteTexts;
   setLocale: (locale: Locale) => void;
 }
 
@@ -65,10 +13,8 @@ const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState<Locale>("ja");
 
-  const texts = locale === "ja" ? jaTexts : enTexts;
-
   return (
-    <I18nContext.Provider value={{ locale, texts, setLocale }}>
+    <I18nContext.Provider value={{ locale, setLocale }}>
       {children}
     </I18nContext.Provider>
   );

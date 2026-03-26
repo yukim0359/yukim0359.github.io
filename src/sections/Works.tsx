@@ -2,11 +2,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Layers2, X } from "lucide-react";
 import { useState } from "react";
 import SectionHeading from "../components/SectionHeading";
-import { works } from "../constants/works";
 import { useI18n } from "../i18n/index.tsx";
+import { worksEn, worksIntroEn } from "../data/en/works";
+import { worksJa, worksIntroJa } from "../data/ja/works";
 
 const Works = () => {
   const { locale } = useI18n();
+  const works = locale === "en" ? worksEn : worksJa;
+  const intro = locale === "en" ? worksIntroEn : worksIntroJa;
   const [selectedWork, setSelectedWork] = useState<number | null>(null);
 
   const openModal = (index: number) => {
@@ -36,11 +39,7 @@ const Works = () => {
           className="mb-10"
         >
           <div className="text-left space-y-5">
-            <p className="section-body">
-              {locale === "en"
-                ? "A selection of things I have worked on, not limited to research. Click an item to see more details."
-                : "研究に限らず，これまでに取り組んできたことの抜粋です。クリックして詳細を確認できます。"}
-            </p>
+            <p className="section-body">{intro}</p>
           </div>
         </motion.div>
 
@@ -59,10 +58,7 @@ const Works = () => {
               </h3>
 
               <p className="text-gray-600 text-sm md:text-base mb-4 line-clamp-3 whitespace-pre-line">
-                {(locale === "en" && work.descriptionsEn
-                  ? work.descriptionsEn
-                  : work.descriptions
-                ).join("\n")}
+                {work.descriptions.join("\n")}
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -116,11 +112,7 @@ const Works = () => {
                         key={descIndex}
                         className="text-gray-600 leading-relaxed"
                       >
-                        {(locale === "en" &&
-                        works[selectedWork].descriptionsEn
-                          ? works[selectedWork].descriptionsEn
-                          : works[selectedWork].descriptions)[descIndex] ??
-                          desc}
+                        {desc}
                       </p>
                     ))}
                   </div>
@@ -137,9 +129,7 @@ const Works = () => {
                             />
                             {img.caption && (
                               <p className="text-sm text-gray-500 mt-2">
-                                {locale === "en" && img.captionEn
-                                  ? img.captionEn
-                                  : img.caption}
+                                {img.caption}
                               </p>
                             )}
                           </div>

@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import { useI18n } from "../i18n/index.tsx";
+import { bioEn } from "../data/en/bio.tsx";
+import { bioJa } from "../data/ja/bio.tsx";
 
 const Bio = () => {
   const { locale } = useI18n();
+  const data = locale === "en" ? bioEn : bioJa;
   return (
     <section id="bio" className="py-6 bg-white">
       <div className="page-container">
@@ -24,110 +27,51 @@ const Bio = () => {
           className="space-y-6"
         >
           <section>
-            <h3 className="section-subheading">
-              {locale === "en" ? "Education" : "学歴"}
-            </h3>
+            <h3 className="section-subheading">{data.educationHeading}</h3>
             <ul className="list-primary section-body">
               <li>
-                {locale === "en"
-                  ? "Apr. 2019 – Mar. 2022: "
-                  : "2019年4月 – 2022年3月："}
-                <span className="font-bold">
-                  {locale === "en" ? "Kaisei High School" : "開成高等学校"}
-                </span>
+                {data.education.kaisei.period}
+                <span className="font-bold">{data.education.kaisei.name}</span>
               </li>
               <li>
-                {locale === "en"
-                  ? "Apr. 2022 – Mar. 2026: "
-                  : "2022年4月 – 2026年3月："}
+                {data.education.uTokyoBSc.period}
                 <span className="font-bold">
-                  {locale === "en"
-                    ? "Department of Information and Communication Engineering, Faculty of Engineering, The University of Tokyo"
-                    : "東京大学 工学部 電子情報工学科"}
+                  {data.education.uTokyoBSc.name}
                 </span>
                 <ul className="list-secondary section-body">
-                  <li>
-                    {locale === "en"
-                      ? "Outstanding Undergraduate Thesis Award"
-                      : "優秀卒業論文賞 受賞"}
-                  </li>
+                  {data.education.uTokyoBSc.notes.map((note: string) => (
+                    <li key={note}>{note}</li>
+                  ))}
                 </ul>
               </li>
               <li>
-                {locale === "en"
-                  ? "Apr. 2026 – Present: "
-                  : "2026年4月 – 現在："}
+                {data.education.uTokyoMSc.period}
                 <span className="font-bold">
-                  {locale === "en"
-                    ? "Department of Information and Communication Engineering, Graduate School of Information Science and Technology, The University of Tokyo"
-                    : "東京大学大学院 情報理工学系研究科 電子情報学専攻"}
+                  {data.education.uTokyoMSc.name}
                 </span>
               </li>
             </ul>
           </section>
 
           <section>
-            <h3 className="section-subheading">
-              {locale === "en" ? "Work Experience" : "職歴"}
-            </h3>
+            <h3 className="section-subheading">{data.workHeading}</h3>
             <ul className="list-primary section-body">
               <li>
-                {locale === "en"
-                  ? "Apr. 2022 – Present: "
-                  : "2022年4月 – 現在："}
+                {data.work.tetsuryokukai.period}
                 <span className="font-bold">
-                  {locale === "en"
-                    ? "Tetsuryokukai (part-time lecturer)"
-                    : "鉄緑会 アルバイト"}
+                  {data.work.tetsuryokukai.name}
                 </span>
                 <ul className="list-secondary section-body">
-                  <li>
-                    {locale === "en"
-                      ? "Teaching mathematics to junior and senior high school students."
-                      : "中高生に数学を教えています。"}
-                  </li>
+                  {data.work.tetsuryokukai.details.map((d: string) => (
+                    <li key={d}>{d}</li>
+                  ))}
                 </ul>
               </li>
               <li>
-                {locale === "en"
-                  ? "Oct. 2025 – Dec. 2025: "
-                  : "2025年10月 – 2025年12月："}
-                <span className="font-bold">
-                  {locale === "en"
-                    ? "Fixstars (internship)"
-                    : "Fixstars インターンシップ"}
-                </span>
+                {data.work.fixstars.period}
+                <span className="font-bold">{data.work.fixstars.name}</span>
                 <ul className="list-secondary section-body">
-                  <li>
-                    {locale === "en" ? (
-                      <>
-                        Wrote a tech blog on LLM fine-tuning on the Blackwell
-                        architecture:{" "}
-                        <a
-                          href="https://zenn.dev/fixstars/articles/6000-max-q-llm-finetuning"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="link"
-                        >
-                          tech blog
-                        </a>
-                        .
-                      </>
-                    ) : (
-                      <>
-                        <a
-                          href="https://zenn.dev/fixstars/articles/6000-max-q-llm-finetuning"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="link"
-                        >
-                          Blackwell アーキテクチャ上での LLM fine-tuning
-                          についての tech blog
-                        </a>{" "}
-                        を執筆しました。
-                      </>
-                    )}
-                  </li>
+                  <li>{data.work.fixstars.blogLine}</li>
                 </ul>
               </li>
             </ul>

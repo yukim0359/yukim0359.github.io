@@ -2,22 +2,25 @@ import { motion } from "framer-motion";
 import { Globe2, Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useI18n } from "../i18n/index.tsx";
+import { headerEn } from "../data/en/header";
+import { headerJa } from "../data/ja/header";
 
 const Header = () => {
-  const { texts, locale, setLocale } = useI18n();
+  const { locale, setLocale } = useI18n();
+  const header = locale === "en" ? headerEn : headerJa;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const navItems = useMemo(
     () => [
-      { name: texts.header.nav.home, href: "#home", id: "home" },
-      { name: texts.header.nav.about, href: "#about", id: "about" },
-      { name: texts.header.nav.research, href: "#research", id: "research" },
-      { name: texts.header.nav.works, href: "#works", id: "works" },
-      { name: texts.header.nav.skills, href: "#skills", id: "skills" },
-      { name: texts.header.nav.bio, href: "#bio", id: "bio" },
+      { name: header.nav.home, href: "#home", id: "home" },
+      { name: header.nav.about, href: "#about", id: "about" },
+      { name: header.nav.research, href: "#research", id: "research" },
+      { name: header.nav.works, href: "#works", id: "works" },
+      { name: header.nav.skills, href: "#skills", id: "skills" },
+      { name: header.nav.bio, href: "#bio", id: "bio" },
     ],
-    [texts.header.nav],
+    [header.nav],
   );
 
   useEffect(() => {
@@ -65,7 +68,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold text-slate-900">
-            <a href="#home">{texts.header.title}</a>
+            <a href="#home">{header.title}</a>
           </div>
 
           <div className="flex items-center gap-4">
@@ -89,7 +92,7 @@ const Header = () => {
 
             <div
               role="group"
-              aria-label={texts.header.language.groupLabel}
+              aria-label={header.language.groupLabel}
               className="ml-2 inline-flex items-stretch overflow-hidden rounded-lg border border-slate-200 bg-white/90 text-xs font-semibold shadow-sm backdrop-blur md:ml-3"
             >
               <span
