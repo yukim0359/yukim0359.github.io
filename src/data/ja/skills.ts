@@ -41,6 +41,7 @@ export const skillsJa: Skill[] = [
     technologies: [],
     descriptions: [
       "2025年5月，応用情報技術者試験を取得しています。",
+      "TOEFL iBT スコア：93/120 (2025年5月)",
       "このホームページを作れる程度には，TypeScript，React，Vite 等のフロントエンドスタックを扱えます。",
     ],
   },

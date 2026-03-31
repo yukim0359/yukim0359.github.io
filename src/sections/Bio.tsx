@@ -74,6 +74,12 @@ const Bio = () => {
                   <li>{data.work.fixstars.blogLine}</li>
                 </ul>
               </li>
+              <li>
+                {data.work.uTokyoHospital.period}
+                <span className="font-bold">
+                  {data.work.uTokyoHospital.name}
+                </span>
+              </li>
             </ul>
           </section>
         </motion.div>

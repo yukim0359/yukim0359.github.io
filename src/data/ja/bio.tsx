@@ -41,5 +41,9 @@ export const bioJa = {
         </>
       ) satisfies ReactNode,
     },
+    uTokyoHospital: {
+      period: "2026年4月 – 現在：",
+      name: "東京大学医学部附属病院 学術専門職員",
+    },
   },
 } as const;

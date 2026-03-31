@@ -44,5 +44,9 @@ export const bioEn = {
         </>
       ) satisfies ReactNode,
     },
+    uTokyoHospital: {
+      period: "Apr. 2026 – Present: ",
+      name: "Academic Technical Staff at The University of Tokyo Hospital",
+    },
   },
 } as const;

@@ -41,6 +41,7 @@ export const skillsEn: Skill[] = [
     technologies: [],
     descriptions: [
       "Passed the Applied Information Technology Engineer Examination in May 2025.",
+      "TOEFL iBT score: 93/120 (May 2025)",
       "Comfortable enough with TypeScript/React/Vite and related frontend stack to build this website.",
     ],
   },
