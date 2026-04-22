@@ -46,4 +46,18 @@ export const researchJa = {
     venueLabel: "LATHC 2026",
     venueUrl: "https://jnamaral.github.io/LATHC26/",
   },
+  publicationHeading: "プレプリント・コード",
+  publication: {
+    authors: (
+      <>
+        <span className="font-bold">Yuki Maeda</span>, Kenjiro Taura.
+      </>
+    ) satisfies ReactNode,
+    title:
+      "GTaP: A GPU-Resident Fork-Join Task-Parallel Runtime with a Pragma-Based Interface.",
+    arxivUrl: "https://arxiv.org/abs/2604.05982",
+    arxivLabel: "arXiv",
+    githubUrl: "https://github.com/yukim0359/GTaP",
+    githubLabel: "GitHub",
+  },
 } as const;

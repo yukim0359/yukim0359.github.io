@@ -68,6 +68,37 @@ const Research = () => {
               </li>
             </ul>
           </section>
+
+          <section className="pt-2">
+            <h3 className="section-subheading">{data.publicationHeading}</h3>
+            <ul className="list-primary section-body">
+              <li>
+                {data.publication.authors}
+                <br />
+                <span className="font-bold">{data.publication.title}</span>
+                <br />
+                <span className="text-slate-700">
+                  <a
+                    href={data.publication.arxivUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    {data.publication.arxivLabel}
+                  </a>
+                  {" · "}
+                  <a
+                    href={data.publication.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    {data.publication.githubLabel}
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </section>
         </motion.div>
       </div>
     </section>
