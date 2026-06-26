@@ -7,7 +7,7 @@ export const worksJa: Work[] = [
   {
     title: "OpenMP Tutorial",
     descriptions: [
-      "B4 時の研究室内の勉強会のため，OpenMP を学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながら OpenMP の基本的な構文に関する学習を進めることができます。",
+      "研究室内の勉強会のため，OpenMP を学習するためのチュートリアルを作成しました。スライドとともにサンプルコードを示しており，手元で動かしながら OpenMP の基本的な構文に関する学習を進めることができます。",
       "各種指示文の機能だけでなく，指示文ごとのパフォーマンスの比較などにより，各種機能の使い所をなるべく明快に理解できるよう意図して作成しました。Github 上で公開しています。",
     ],
     images: [
@@ -21,6 +21,10 @@ export const worksJa: Work[] = [
       {
         title: "Github",
         url: "https://github.com/yukim0359/OpenMP-tutorial",
+      },
+      {
+        title: "Slide",
+        url: "https://speakerdeck.com/yukim0359/openmp-tutorial",
       },
     ],
     technologies: ["C", "OpenMP"],

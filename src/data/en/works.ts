@@ -7,7 +7,7 @@ export const worksEn: Work[] = [
   {
     title: "OpenMP Tutorial",
     descriptions: [
-      "Created an OpenMP tutorial for a lab study session in my fourth undergraduate year. It combines slides with sample code so that learners can run code locally while studying the basic OpenMP constructs.",
+      "Created an OpenMP tutorial for a lab study session. It combines slides with sample code so that learners can run code locally while studying the basic OpenMP constructs.",
       "I tried to not only explain each directive but also compare their performance, so that readers can clearly understand when and how to use the different features. The materials are available on GitHub.",
     ],
     images: [
@@ -21,6 +21,10 @@ export const worksEn: Work[] = [
       {
         title: "Github",
         url: "https://github.com/yukim0359/OpenMP-tutorial",
+      },
+      {
+        title: "Slide",
+        url: "https://speakerdeck.com/yukim0359/openmp-tutorial",
       },
     ],
     technologies: ["C", "OpenMP"],
